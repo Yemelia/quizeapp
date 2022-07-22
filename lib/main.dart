@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
+import 'package:quizapp/routes.dart';
+import 'package:quizapp/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,14 +33,17 @@ class _AppState extends State<App> {
       // Initialize FlutterFire:
       future: _initialization,
       builder: (context, snapshot) {
+        // Once complete, show your application
+        if (snapshot.connectionState == ConnectionState.done) {
+          return MaterialApp(
+            routes:  appRoutes,
+            theme: appTheme,
+          );
+        }
+
         // Check for errors
         if (snapshot.hasError) {
           return const Text('error', textDirection: TextDirection.ltr);
-        }
-
-        // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
-          return const MaterialApp();
         }
 
         // Otherwise, show something whilst waiting for initialization to complete
