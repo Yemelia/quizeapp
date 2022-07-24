@@ -12,13 +12,14 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.5
-  firebase_core: 1.18.0
-  cloud_firestore: 3.1.18
-  firebase_auth: 3.3.20
-  # google_sign_in: 5.3.3
-  # sign_in_with_apple: 4.0.0
-  # crypto: 3.0.1
+  firebase_core: 1.20.0
+  cloud_firestore: ^3.4.0
+  firebase_auth: 3.5.0
+  google_sign_in: ^5.4.0
+  sign_in_with_apple: ^4.1.0
+  crypto: ^3.0.2
   font_awesome_flutter: 10.1.0
+  json_serializable: 6.3.1
   google_fonts: 3.0.1
   # provider: 6.0.3
   # rxdart: 0.27.4
@@ -28,7 +29,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
 
   # build_runner: 2.1.11
   # json_serializable: 6.2.0
